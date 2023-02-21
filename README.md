@@ -31,5 +31,7 @@
 ##### Technology 
 - Visual Studio Code
 - Python 
+- HTML
+- CSS
 
 ##### Video
