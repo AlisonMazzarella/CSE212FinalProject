@@ -27,22 +27,107 @@
         <div class="text">
             <h2>Introduction</h2>
             <p>
-                Sets are used to store multiple items in a single variable. They are a collection which is unordered, unchangeable, and unindexed. 
-                Because sets are unordered items can appear in a different order every time you use them, and therefore cannot be referred to by index. 
-                Sets do not allow for duplicate values. 
-                While unchangeable, you can alter a set by removing items and adding new ones. 
-                Sets are identifiable by their use of curly brackets "{ }". 
+                In Python, trees are like linked lists where the nodes are connected together by pointers. 
+                However, where linked lists can only connect to one node, trees can connect to multiple nodes.  
             </p>
-
-            <h3>Binary Trees</h3>
-
-            <h3>Binary Search Trees</h3>
-            
-            <h3>Examples</h3>
+            <p>    
+                There are three main types of trees: binary trees, binary search trees, and balanced binary search trees.
+                A binary tree is a tree that links to no more than two other nodes. 
+            </p>
             <p>
-                setexample = {"milk", "bread", "eggs"}
-                print(setexample)
+                The top node is called the root node, and the nodes
+                that connect to no other nodes are called leaf nodes. A node with other nodes connected to it is called a parent node. 
+                All nodes connected to the parent node are called child nodes. Nodes to the left and right of the parent node form a subtree. 
             </p>
+            <br>
+
+            <h3>Binary Tree Example</h3>
+            <p>
+                class Node: 
+                <br>
+                def _init_(self, data):
+                <br>
+                self.left = None
+                <br>
+                self.right = None
+                <br>
+                self.data = data 
+                <br>
+                <br>
+                def PrintTree(self):
+                <br>
+                print(self.data)
+                <br>
+                <br>
+                root = Node(10)
+                <br>
+                root.PrintTree() #Output: 10
+            </p>
+            <br>
+            <br>
+
+            <h2>Binary Search Tree</h2>
+            <p>
+                A binary search tree is a binary tree that follows rules for the data that is incorporated into the tree. 
+                Data is placed into the tree by comparing the data with the value in the parent node. 
+            </p>
+            <p>    
+                If the data is less than the 
+                value of the parent node, it is put on the left subtree. If the value is greater than the value of the parent node, it is 
+                put on the right subtree. 
+            </p>
+            <br>
+
+            <h3>Binary Search Tree Example</h3>
+            <p>
+                <img src="images/BinarySearchTree.png" alt="BinarySearchTree">
+            </p>
+            <p>
+                <br>
+                To insert the value 10, do the following: 
+            </p>
+            <p>
+                Start at the root node 50 and compare with the new value 10.
+                <br>
+                Since 10 is less than than 50, go to the left and visit node 30.
+                <br>
+                Since 10 is less than 30, go to the left and visit node 35.
+                <br>
+                Since 10 is less than 35, go to the left and visit node 42.
+                <br>
+                Since 10 is less than 42, to the left and see there is no additional node. 
+                <br>
+                Insert 10 in the empty spot.
+            </p>
+            <br>
+            <br>
+
+            <h2>Balanced Binary Search Tree</h2>
+            <p>
+                A balanced binary search tree is a tree where the heights of the left and right subtrees are not significantly different.
+            </p>    
+            <p>
+                You can find the height of the tree by counting the maximum number of nodes between root and leaves on each subtree: whichever
+                side is greater becomes the height of the tree overall. 
+            </p>
+            <br>
+            
+            <h3>Balanced Binary Search Tree Example</h3>
+            <p>
+                <img src="images/balancedbinarytree.png" alt="BalancedBinarySearchTree">
+            </p>
+            <p>
+                The tree in this example is balanced because the difference of height between subtrees is less than 2. 
+            </p>
+            <p>
+                To determine if the tree is balanced, get the height of the left subtree and the height of the right subtree of the current node.
+            </p>
+            <p>
+                Calculate the absolute difference between the heights of the left and right subtrees.
+                If the height difference is greater than 1, than the tree is not balanced. 
+            </p>
+            <br>
+            <br>
             <div id="intro"></div>
         </div>
     </div>

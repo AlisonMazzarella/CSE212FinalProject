@@ -27,22 +27,140 @@
         <div class="text">
             <h2>Introduction</h2>
             <p>
-                Sets are used to store multiple items in a single variable. They are a collection which is unordered, unchangeable, and unindexed. 
-                Because sets are unordered items can appear in a different order every time you use them, and therefore cannot be referred to by index. 
-                Sets do not allow for duplicate values. 
-                While unchangeable, you can alter a set by removing items and adding new ones. 
-                Sets are identifiable by their use of curly brackets "{ }". 
+                In Python, a stack is a linear data structure that stores items in a last-in, first-out manner. 
+                In a stack, a new element is added at one end, and an element is removed from that end only. 
             </p>
+            <p>    
+                You can implement a stack in Python using a list data structure, append() to push elements onto the stack, and the pop() method.
+            </p>
+            <p>    
+                Functions associated with a stack are empty(), size(), push(), and pop(). 
+                Insert and delete are the most commonly used functions associated with a stack, they are often called push and pop. 
+            </p>    
+            <p>    
+                There are various ways to implement a stack in Python. You can use data structures and modules from the Python
+                library like list, Collections.deque, or queue.LifoQueue. 
+            </p>
+            <br>
 
-            <h3>Functions</h3>
-
-            <h3>Dequeue & Queue</h3>
-            
-            <h3>Examples</h3>
+            <h3>Stack Example</h3>
             <p>
-                setexample = {"milk", "bread", "eggs"}
-                print(setexample)
+                <img src="images/stack.png" alt="Stack">
             </p>
+            <p>
+                stack = [1, 2, 3]
+                <br>
+
+                print(stack) #Output: 1, 2, 3
+            </p>
+            <br>
+            <br>
+
+            <h2>List</h2>
+            <p>
+                In Python, you can use the built-in data structure list as a stack. Instead of push(), append() is used to add elements
+                to the top of the stack, while pop() removes the element in last-in, first-out order. 
+            </p>
+            <p>
+                Since items in a list are stored next to each other in memory, if the stack grows bigger than the block of memory that is currently
+                holding it, then Python needs to add more memory. This process can lead to increased execution time when calling append(). 
+            </p>
+            <br>
+
+            <h3>List Example</h3>
+            <p>
+                stack = []
+                <br>
+                <br>
+                stack.append('a')
+                stack.append('z')
+                <br>
+                print(stack) #Output: ['a', 'z']
+                <br>
+                <br>
+                pring(stack.pop())
+                <br>
+                print(stack) #Output: ['a']
+            </p>
+            <br>
+            <br>
+
+            <h2>Collections.deque</h2>
+            <p>
+                <img src="images/dequeu.png" alt="Dequeu">
+            </p>
+            <p>
+                In Python, stacks can be implemented using the deque class from the collections module. Deque is preferred over list 
+                in cases where we need quicker append and pop operations from both ends of the container. 
+            </p>
+            <p>
+                While Deque provides an O(1) time complexity for append and pop operations, List only provides an O(n) time complexity.
+            </p>
+            <br>
+            
+            <h3>Collections.deque Example</h3>
+            <p>
+                from collections import deque
+                <br>
+                <br>
+                stack = deque()
+                <br>
+                <br>
+                stack.append('a')
+                stack.append('z')
+                <br>
+                print(stack) #Output: deque(['a', 'z'])
+                <br>
+                <br>
+                print(stack.pop())
+                <br>
+                print(stack) #Output: deque(['a'])
+            </p>
+            <br>
+            <br>
+
+            <h2>Queue Module</h2>
+            <p>
+                <img src="images/queue.png" alt="Queue">
+            </p>
+            <p>
+                In Python, queue operates much like the Collections.deque module. 
+                Data is inserted into the queue using the put() function, and get() takes data out of the queue.
+                Queue has many built-in functions in its module to insert and remove data. 
+            </p>
+            <p>
+                 Some functions include maxsize
+                 to show the number of items allowed in the queue; empty() will return true when the queue is empty; full() returns true if there are
+                 maxsize items in the queue; get() removes and returns items from the queue; and qsize(), which returns the number of items in the queue. 
+            </p>
+            <br>
+            
+            <h3>Queue Example</h3>
+            <p>
+                from queue import LifoQueue
+                <br>
+                <br>
+                stack = LifoQueue(maxsize=2)
+                <br>
+                <br>
+                stack.put('a')
+                <br>
+                stack.put('z')
+                <br>
+                print(stack.full()) #Output: False
+                <br>
+                print(stack.qsize) #Output: 2 
+                <br>
+                <br>
+                print(stack.get())
+                <br>
+                print(stack.get())
+                <br>
+                print(stack.empty()) #Output: True
+            </p>
+            <br>
+            <br>
+
             <div id="intro"></div>
         </div>
     </div>

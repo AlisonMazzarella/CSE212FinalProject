@@ -2,6 +2,10 @@ body {
     margin: 0;
     font-family: 'Georgia' sans-serif;
     background-color: #EDEDE9;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    scroll-padding-bottom: 10%;
+    margin-bottom: 30px;
 }
 
 .app {
