@@ -10,22 +10,24 @@
 ##### SETS
 - Introduction
 - Hashing
-- Union & Set Operations 
-- Example
+- Union
+- Intersection
+- Examples
 - Practice Problems
 
 ##### STACKS
 - Introduction
-- Functions
-- Dequeue & Queue Operations
-- Example
+- List
+- Collections.dequeue
+- Queue Module
+- Examples
 -	Practice Problems
 
 ##### TREES 
 -	Introduction
--	Binary Trees
 -	Binary Search Trees
--	Example
+-	Balanced Binary Search Trees
+-	Examples
 -	Practice Problems
 
 ##### Technology 
